@@ -14,7 +14,6 @@ const lng = 32.854371;
 // calling map
 const map = L.map('map', config).setView([lat, lng], zoom);
 
-map.fitBounds(bounds);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -27,10 +26,14 @@ L.control.zoom({ position: "topright" }).addTo(map);
 // Sclae control
 L.control.scale('metric').addTo(map);
 
+// method fitBounds sets a map view
+// that contains the given geographical bounds with the
+// maximum zoom level possible.
 let bounds = [
   [50, 50], // padding
 ];
 
+map.fitBounds(bounds);
 
 // single point
 //L.marker([39.941974, 32.854371]).addTo(map)
