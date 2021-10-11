@@ -42,5 +42,5 @@ let points = [
 for (let i = 0; i < points.length; i++) {
   const [lat, lng, popupText] = points[i];
 
-  marker1 = new L.marker([lat, lng]).bindPopup(popupText).addTo(map);
+  marker = new L.marker([lat, lng]).bindPopup(popupText).addTo(map);
 }
