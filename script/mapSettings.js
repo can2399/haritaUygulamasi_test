@@ -3,7 +3,6 @@ let config = {
   minZoom: 7,
   maxZomm: 18,
   zoomControl: false, // zoom control off
-  maxBounds: bounds,
 };
 
 // magnification with which the map will start
