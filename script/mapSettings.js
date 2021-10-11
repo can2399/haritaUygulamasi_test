@@ -1,4 +1,18 @@
-var map = L.map('map').setView([39.941974, 32.854371], 13);
+// config map
+let config = {
+  minZoom: 7,
+  maxZomm: 18,
+  zoomControl: false, // zoom control off
+};
+
+// magnification with which the map will start
+const zoom = 18;
+// co-ordinates
+const lat = 39.941974;
+const lng = 32.854371;
+
+// calling map
+const map = L.map('map').setView([lat, lng], zoom);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
