@@ -23,7 +23,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.control.zoom({ position: "topright" }).addTo(map);
 
 // Sclae control
-L.control.scale().addTo(map);
+L.control.scale(metric).addTo(map);
 
 L.marker([39.941974, 32.854371]).addTo(map)
     .bindPopup('<b>TESPİT DURUMU</b><br><br>Tespiti Yapılan : 230<br>Tespit Yapılacak : 200<br>İdari Yoldan Tescil : 29')
