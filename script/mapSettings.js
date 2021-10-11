@@ -3,6 +3,7 @@ let config = {
   minZoom: 7,
   maxZomm: 18,
   zoomControl: false, // zoom control off
+  maxBounds: bounds,
 };
 
 // magnification with which the map will start
@@ -14,6 +15,8 @@ const lng = 32.854371;
 // calling map
 const map = L.map('map', config).setView([lat, lng], zoom);
 
+map.fitBounds(bounds);
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
@@ -24,6 +27,10 @@ L.control.zoom({ position: "topright" }).addTo(map);
 
 // Sclae control
 L.control.scale('metric').addTo(map);
+
+let bounds = [
+  [50, 50], // padding
+];
 
 
 // single point
