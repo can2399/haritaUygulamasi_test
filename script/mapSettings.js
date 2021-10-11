@@ -31,7 +31,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.control.zoom({ position: "topright" }).addTo(map);
 
 // Sclae control
-L.control.scale(metric).addTo(map);
+L.control.scale('metric').addTo(map);
 
 
 // single point
