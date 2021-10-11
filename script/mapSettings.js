@@ -29,4 +29,3 @@ L.marker([39.941974, 32.854371]).addTo(map)
     .bindPopup('<b>TESPİT DURUMU</b><br><br>Tespiti Yapılan : 230<br>Tespit Yapılacak : 200<br>İdari Yoldan Tescil : 29')
     .openPopup();
 
-L.marker([39.141974, 32.554371]).addTo(map).bindPopup("Test");
