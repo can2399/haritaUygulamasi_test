@@ -14,7 +14,6 @@ const lng = 32.854371;
 // calling map
 const map = L.map('map', config).setView([lat, lng], zoom);
 // method fitBounds sets a map view
-map.fitBounds();
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
