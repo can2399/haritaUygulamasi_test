@@ -22,8 +22,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // [topleft, topright, bottomleft, bottomright]
 L.control.zoom({ position: "topright" }).addTo(map);
 
-// Sclae control
-L.control.scale().addTo(map);
+
 
 
 L.marker([39.941974, 32.854371]).addTo(map)
