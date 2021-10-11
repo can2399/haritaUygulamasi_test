@@ -27,13 +27,7 @@ L.control.zoom({ position: "topright" }).addTo(map);
 L.control.scale('metric').addTo(map);
 
 // method fitBounds sets a map view
-// that contains the given geographical bounds with the
-// maximum zoom level possible.
-let bounds = [
-  [50, 50], // padding
-];
-
-map.fitBounds(bounds);
+map.fitBounds();
 
 // single point
 //L.marker([39.941974, 32.854371]).addTo(map)
