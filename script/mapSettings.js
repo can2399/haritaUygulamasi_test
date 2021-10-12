@@ -54,7 +54,7 @@ let points = [
   ["Program","Akyurt","Çam","20 Eylül - 20 Ekim",29,29,40.138222906247115,33.17026329614371],
   ["Program Dışı","Altındağ","Kavaklı","20 Eylül - 20 Ekim",45,40,40.0072035497873,33.04279069250751],
   ["Program Dışı","Altındağ","Aydıncık","20 Eylül - 20 Ekim",12,10,40.038399244170044,33.06638317260862],
-  ["İdari Yoldan Tescil","Kalecik","Çandır","20 Eylül - 20 Ekim",40,40,40.260824057803084,33.467988059119065],
+  ["İdari Yoldan Tescil","Kalecik","Çandır","20 Eylül - 20 Ekim",40,40,40.260824057803084,33.467988059119065]
 ];
     
 // loop that adds many markers to the map
