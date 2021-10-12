@@ -34,12 +34,20 @@ L.control.scale('metric').addTo(map);
 //    .openPopup();
 
 // coordinate array with popup text
-// let points = [
-// [39.96974, 32.854371, "point 1"],
-// [39.931974, 32.454371, "point 2"],
-// [39.961974, 32.854371, "point 3"],
-// [39.911974, 32.254371, "point 4"],
-// ];
+/* let points = [
+    [39.96974, 32.854371, "point 1"],
+    [39.931974, 32.454371, "point 2"],
+    [39.961974, 32.854371, "point 3"],
+    [39.911974, 32.254371, "point 4"],
+ ];
+ */
+
+// loop that adds many markers to the map
+/* for (let i = 0; i < points.length; i++) {
+      const [lat, lng, popupText] = points[i];
+      marker = new L.marker([lat, lng]).bindPopup(popupText).openPopup().addTo(map);
+}
+*/
 
 let points = [
   ["Program","Akyurt","Ahmet Adil","20 Eylül - 20 Ekim",30,0,40.11467846572961,33.23448936169003],
@@ -51,9 +59,6 @@ let points = [
     
 // loop that adds many markers to the map
 for (let i = 0; i < points.length; i++) {
-   // const [lat, lng, popupText] = points[i];
   const [tespitDurum, ilce, mahalle, donem, tasinmazSayisi, tespitiYapilan, enlem, boylam] = points[i];
-  
-  // marker = new L.marker([lat, lng]).bindPopup(popupText).openPopup().addTo(map);
   marker = new L.marker([enlem, boylam]).bindPopup(mahalle).openPopup().addTo(map);
 }
