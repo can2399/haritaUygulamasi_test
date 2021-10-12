@@ -34,12 +34,12 @@ L.control.scale('metric').addTo(map);
 //    .openPopup();
 
 // coordinate array with popup text
-let points = [
-  [39.96974, 32.854371, "point 1"],
-  [39.931974, 32.454371, "point 2"],
-  [39.961974, 32.854371, "point 3"],
-  [39.911974, 32.254371, "point 4"],
-];
+// let points = [
+// [39.96974, 32.854371, "point 1"],
+// [39.931974, 32.454371, "point 2"],
+// [39.961974, 32.854371, "point 3"],
+// [39.911974, 32.254371, "point 4"],
+// ];
 
 let points = [
   ["Program","Akyurt","Ahmet Adil","20 Eylül - 20 Ekim",30,0,40.11467846572961,33.23448936169003],
