@@ -51,7 +51,9 @@ let points = [
     
 // loop that adds many markers to the map
 for (let i = 0; i < points.length; i++) {
+   // const [lat, lng, popupText] = points[i];
   const [tespitDurum, ilce, mahalle, donem, tasinmazSayisi, tespitiYapilan, enlem, boylam] = points[i];
-
+  
+  // marker = new L.marker([lat, lng]).bindPopup(popupText).openPopup().addTo(map);
   marker = new L.marker([enlem, boylam]).bindPopup(mahalle, tasinmazSayisi).openPopup().addTo(map);
 }
