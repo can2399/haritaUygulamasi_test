@@ -55,5 +55,5 @@ for (let i = 0; i < points.length; i++) {
   const [tespitDurum, ilce, mahalle, donem, tasinmazSayisi, tespitiYapilan, enlem, boylam] = points[i];
   
   // marker = new L.marker([lat, lng]).bindPopup(popupText).openPopup().addTo(map);
-  marker = new L.marker([enlem, boylam]).bindPopup(tasinmazSayisi).openPopup().addTo(map);
+  marker = new L.marker([enlem, boylam]).bindPopup(mahalle).openPopup().addTo(map);
 }
