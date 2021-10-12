@@ -41,9 +41,17 @@ let points = [
   [39.911974, 32.254371, "point 4"],
 ];
 
+let points = [
+  ["Program","Akyurt","Ahmet Adil","20 Eylül - 20 Ekim",30,0,40.11467846572961,33.23448936169003],
+  ["Program","Akyurt","Çam","20 Eylül - 20 Ekim",29,29,40.138222906247115,33.17026329614371],
+  ["Program Dışı","Altındağ","Kavaklı","20 Eylül - 20 Ekim",45,40,40.0072035497873,33.04279069250751],
+  ["Program Dışı","Altındağ","Aydıncık","20 Eylül - 20 Ekim",12,10,40.038399244170044,33.06638317260862],
+  ["İdari Yoldan Tescil","Kalecik","Çandır","20 Eylül - 20 Ekim",40,40,40.260824057803084,33.467988059119065],
+];
+    
 // loop that adds many markers to the map
 for (let i = 0; i < points.length; i++) {
-  const [lat, lng, popupText] = points[i];
+  const [tespitDurum, ilce, mahalle, donem, tasinmazSayisi, tespitiYapilan, enlam, boylam] = points[i];
 
-  marker = new L.marker([lat, lng]).bindPopup(popupText).openPopup().addTo(map);
+  marker = new L.marker([enlem, boylam]).bindPopup(mahalle, tasinmazSayisi).openPopup().addTo(map);
 }
