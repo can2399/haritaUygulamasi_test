@@ -46,7 +46,7 @@ var openTopo = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png', {
 
 var baseLayers = {
   "Open Street Map": osm,
-  "Open topo Map"  : openTopo,
+  "Open Topo Map"  : openTopo,
   "Google Sokak"   : googleStreets,
   "Google Hibrit"  : googleHybrid,
   "Google Uydu"    : googleSat
