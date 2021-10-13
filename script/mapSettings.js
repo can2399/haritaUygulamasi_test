@@ -1,7 +1,7 @@
 // config map
 let config = {
   minZoom: 7,
-  maxZomm: 18,
+  maxZoom: 18,
   zoomControl: false, // zoom control off
 };
 
@@ -36,7 +36,7 @@ var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
 });
 var openTopo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"', {
     attribution: '&copy; '
-    maxZoom: 20,
+    maxZoom: 16,
     subdomains:['mt0','mt1','mt2','mt3']
 }).addTo(map);
 
