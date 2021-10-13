@@ -34,8 +34,10 @@ var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
 });
-var openTopo = L.tileLayer('https://{a|b|c}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+var openTopo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"', {
     attribution: '&copy; '
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
 }).addTo(map);
 
 var baseLayers = {
