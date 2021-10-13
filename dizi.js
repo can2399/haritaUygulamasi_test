@@ -1,6 +1,6 @@
 var map = L.map('map').setView([51.505, -0.09], 13);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{a|b|c}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
@@ -76,5 +76,10 @@ for (let i = 0; i < points.length; i++) {
 */
   var yenidizi = points.filter(dizi => dizi.tespitDurum=='Program');
   console.log(yenidizi);
-  console.log(yenidizi[0]);
-  
+  console.log(yenidizi[0].enlem);
+
+  for (let i = 0; i < yenidizi.length; i++) {
+    // const [tespitDurum, ilce, mahalle, donem, tasinmazSayisi, tespitiYapilan, enlem, boylam] = points[i];
+    console.log(yenidizi[i].enlem);
+    marker = new L.marker([yenidizi[i].enlem,yenidizi[i].boylam]).bindPopup(yenidizi[i].mahalle+"<br>"+yenidizi[i].tasinmazSayisi).openPopup().addTo(map);
+  }
