@@ -15,9 +15,34 @@ const lng = 32.854371;
 const map = L.map('map', config).setView([lat, lng], zoom);
 // method fitBounds sets a map view
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+    attribution: '&copy; ,
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+var googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    attribution: '&copy; ,
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+    attribution: '&copy; ,
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+
+var baseLayers = {
+  "Open Street Map": osm,
+  "Google Sokak"   : googleStreets,
+  "Google Hibrit"  : googleHybrid,
+  "Google Uydu"    : googleSat
+};
+
+ var topluKatman = L.control.layers(baseLayers).addTo(map);
 
 // reactivate zoom at the desired location
 // [topleft, topright, bottomleft, bottomright]
@@ -25,6 +50,7 @@ L.control.zoom({ position: "topright" }).addTo(map);
 
 // Sclae control
 L.control.scale('metric').addTo(map);
+
 
 
 
