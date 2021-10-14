@@ -4,6 +4,7 @@ let config = {
     minZoom: 7,
     maxZoom: 18,
     zoomControl: false, // zoom control off
+    dragging: false
   };
   
   // magnification with which the map will start
