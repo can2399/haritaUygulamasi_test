@@ -4,8 +4,8 @@ let config = {
     minZoom: 7,
     maxZoom: 18,
     zoomControl: false, // zoom control off (sol tarafta + - butonunu iptal eder
-    dragging: true // false yazılırsa, mouse ile tutup çekme iptal eder.
-    attributionControl:true; // false yazılırsa, haritayı yukarı aşağı indirip yükseltme iptal eder. 
+    dragging: true, // false yazılırsa, mouse ile tutup çekme iptal eder.
+    attributionControl:true // false yazılırsa, haritayı yukarı aşağı indirip yükseltme iptal eder. 
   };
   
   // magnification with which the map will start
