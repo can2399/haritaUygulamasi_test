@@ -20,13 +20,13 @@ let config = {
   //  method fitBounds sets a map view                 
   
   // Event Örnekleri
-  // event handler on left click
+  // event handler on left click - Sol tuşa basınca koordinat ve zoom bilgisi gelsin
        map.on('click' , function (e) {
            alert(e.latlng.toString());
            alert(myMap.getZoom());
        });
    
-  // right click
+  // right click - sağ tuşa basınca nokta eklesin - noktaya tıklayınca koordinat bilgisi gelsin
         map.on('contextmenu', function (e) {
             L.marker(e.latlng).addTo(map).bindPopup(e.latlng.toString());
         })
