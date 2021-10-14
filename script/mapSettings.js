@@ -1,3 +1,5 @@
+ var mrkCurrentLocation;
+
 $(document).ready(function(){
    // config map
 let config = {
@@ -38,7 +40,7 @@ let config = {
    
     // call locate method
    
-      var mrkCurrentLocation;
+     
 
         map.on('keypress', function (e) {
             if (e.originalEvent.key = 'l'){
@@ -61,7 +63,7 @@ let config = {
 
             alert("location was not found");
 
-        })
+        });
    
    
   var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
