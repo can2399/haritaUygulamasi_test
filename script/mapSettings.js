@@ -19,6 +19,7 @@ let config = {
   const map = L.map('map', config).setView([lat, lng], zoom);
   //  method fitBounds sets a map view                 
   
+   /*
   // Event Örnekleri
   // event handler on left click - Sol tuşa basınca koordinat ve zoom bilgisi gelsin
        map.on('click' , function (e) {
@@ -31,7 +32,11 @@ let config = {
             L.marker(e.latlng).addTo(map).bindPopup(e.latlng.toString());
         })
   
-  
+  */
+   
+   // Locale 
+   
+   
   var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
