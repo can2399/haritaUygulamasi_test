@@ -3,8 +3,9 @@ $(document).ready(function(){
 let config = {
     minZoom: 7,
     maxZoom: 18,
-    zoomControl: false, // zoom control off
-    dragging: false
+    zoomControl: false, // zoom control off (sol tarafta + - butonunu iptal eder
+    dragging: true // false yazılırsa, mouse ile tutup çekme iptal eder.
+    attributionControl:true; // false yazılırsa, haritayı yukarı aşağı indirip yükseltme iptal eder. 
   };
   
   // magnification with which the map will start
@@ -18,6 +19,10 @@ let config = {
   const map = L.map('map', config).setView([lat, lng], zoom);
   //  method fitBounds sets a map view                 
   
+   // Event Sample
+   map.on('click' function(e){
+      alert(e.latlng.toString())
+   });
   
   
   var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
