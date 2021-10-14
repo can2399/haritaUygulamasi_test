@@ -34,7 +34,32 @@ let config = {
   
   */
    
-   // Locale 
+   // Locale - L tuşuna basınca konum a gider
+   
+    // call locate method
+
+        myMap.on('keypress', function (e) {
+            if (e.originalEvent.key = 'l'){
+                myMap.locate();
+            }
+        });
+
+        myMap.on('locationfound', function (e) {
+
+            if(mrkCurrentLocation){
+
+                mrkCurrentLocation.remove();
+            }
+            mrkCurrentLocation = L.circleMarker(e.latlng).addTo(myMap);
+            myMap.setView(e.latlng, 14);
+
+        });
+
+        myMap.on('locationerror', function (e) {
+
+            alert("location was not found");
+
+        })
    
    
   var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
