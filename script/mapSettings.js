@@ -12,7 +12,7 @@ const lat = 39.941974;
 const lng = 32.854371;
 
 // calling map
-$(document).ready(fucntion(){
+$(document).ready(function(){
     const map = L.map('map', config).setView([lat, lng], zoom);
 //  method fitBounds sets a map view                 
 });
