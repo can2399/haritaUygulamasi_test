@@ -19,10 +19,12 @@ let config = {
   const map = L.map('map', config).setView([lat, lng], zoom);
   //  method fitBounds sets a map view                 
   
-   // Event Sample
-   map.on('click' function(e){
-      alert(e.latlng.toString())
-   });
+
+  // event handler on left click
+       map.on('click' , function (e) {
+           alert(e.latlng.toString());
+           alert(myMap.getZoom());
+       });
   
   
   var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
