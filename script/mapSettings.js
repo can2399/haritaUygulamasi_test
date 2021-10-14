@@ -37,25 +37,27 @@ let config = {
    // Locale - L tuşuna basınca konum a gider
    
     // call locate method
+   
+      var mrkCurrentLocation;
 
-        myMap.on('keypress', function (e) {
+        map.on('keypress', function (e) {
             if (e.originalEvent.key = 'l'){
-                myMap.locate();
+                map.locate();
             }
         });
 
-        myMap.on('locationfound', function (e) {
+        map.on('locationfound', function (e) {
 
             if(mrkCurrentLocation){
 
                 mrkCurrentLocation.remove();
             }
             mrkCurrentLocation = L.circleMarker(e.latlng).addTo(myMap);
-            myMap.setView(e.latlng, 14);
+            map.setView(e.latlng, 14);
 
         });
 
-        myMap.on('locationerror', function (e) {
+        map.on('locationerror', function (e) {
 
             alert("location was not found");
 
