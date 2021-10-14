@@ -19,12 +19,17 @@ let config = {
   const map = L.map('map', config).setView([lat, lng], zoom);
   //  method fitBounds sets a map view                 
   
-
+  // Event Örnekleri
   // event handler on left click
        map.on('click' , function (e) {
            alert(e.latlng.toString());
            alert(myMap.getZoom());
        });
+   
+  // right click
+        map.on('contextmenu', function (e) {
+            L.marker(e.latlng).addTo(map).bindPopup(e.latlng.toString());
+        })
   
   
   var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
