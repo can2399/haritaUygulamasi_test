@@ -124,6 +124,7 @@ let config = {
  // get specific location
     $('#go_to_id').click(function () {
         map.setView([39.941974, 32.854371], 18);
+        map.openPopup(popMinarEPakistan);
     })
  
  // get zoom level
@@ -149,7 +150,7 @@ let config = {
  
    // popup for minar e pakistan
     popMinarEPakistan = L.popup();
-    popMinarEPakistan.setLatLng([31.59248,74.30966]);
+    popMinarEPakistan.setLatLng([39.941974, 32.854371]);
     popMinarEPakistan.setContent("<h2> Minar e Pakistan </h2>" +
         "<img src='img/minar-e-pakistan.jpg' width='300px' />");
     
