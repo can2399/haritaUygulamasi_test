@@ -32,12 +32,14 @@ let config = {
   //  method fitBounds sets a map view                 
   
   // leaflet provider sample
-  // var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  var osm = L.tileLayer.provider('OpenStreetMap.Mapnik', {
+ var osm = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
  
+ /*
+  var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-  
+  */
+ 
   var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
       attribution: '&copy; ',
       maxZoom: 20,
