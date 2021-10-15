@@ -103,7 +103,7 @@ let config = {
 
                 mrkCurrentLocation.remove();
             }
-            mrkCurrentLocation = L.circleMarker(e.latlng).addTo(myMap);
+            mrkCurrentLocation = L.circleMarker(e.latlng).addTo(map);
             map.setView(e.latlng, 14);
 
         });
