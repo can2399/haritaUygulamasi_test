@@ -60,6 +60,11 @@ let config = {
       maxZoom: 16,
       subdomains:['mt0','mt1','mt2','mt3']
   });
+ var yandexMap = L.tileLayer('https://sat0{1-4}.maps.yandex.net/tiles?l=sat&x={x}&y={y}&z={z}', {
+      attribution: '&copy; ',
+      maxZoom: 16,
+      subdomains:['mt0','mt1','mt2','mt3']
+  });
   
   // {a|b|c}.tile.opentopomap.org/{z}/{x}/{y}.png
   // https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png
@@ -70,7 +75,8 @@ let config = {
     "Open Topo Map"  : openTopo,
     "Google Sokak"   : googleStreets,
     "Google Hibrit"  : googleHybrid,
-    "Google Uydu"    : googleSat
+    "Google Uydu"    : googleSat,
+    "Yandex"         : yandexMap
   };
   
    var topluKatman = L.control.layers(baseLayers).addTo(map);
