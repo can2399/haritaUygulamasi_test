@@ -31,7 +31,10 @@ let config = {
   map = L.map('map', config).setView([lat, lng], zoom);
   //  method fitBounds sets a map view                 
   
-  var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+ leaflet provider sample
+  // var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  var osm = L.tileLayer.provider('OpenStreetMap.Mapnik', {
+ 
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
   
