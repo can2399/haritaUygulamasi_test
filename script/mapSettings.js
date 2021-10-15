@@ -173,7 +173,7 @@ let config = {
  
 
  
-  ctlEasyButton = L.easyButton('fa-exchange', function () {
+  ctlEasyButton = L.easyButton('fa-crosshairs', function () {
         map.locate();
     }).addTo(map);
  
