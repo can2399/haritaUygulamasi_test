@@ -3,6 +3,8 @@ var mrkCurrentLocation;
 var popMinarEPakistan;
 var ctlPan;
 var ctlZoomSlider;
+var ctlMousePosition;
+var ctlMeasure;
 
 $(document).ready(function(){
  
@@ -159,7 +161,11 @@ let config = {
     
     // popMinarEPakistan.openOnmap);
  
+ // Plugins 
   ctlPan = L.control.pan().addTo(map);
   ctlZoomSlider = L.control.zoomslider({position: 'topright'}).addTo(map);
+ 
+  ctlMousePosition = L.control.mousePosition().addTo(map);
+  ctlMeasure =L.control.polylineMeasure().addTo(map);
 });
 
