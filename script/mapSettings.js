@@ -5,6 +5,8 @@ var ctlPan;
 var ctlZoomSlider;
 var ctlMousePosition;
 var ctlMeasure;
+var ctlEasyButton;
+var ctlSidebar
 
 $(document).ready(function(){
  
@@ -167,5 +169,12 @@ let config = {
  
   ctlMousePosition = L.control.mousePosition().addTo(map);
   ctlMeasure =L.control.polylineMeasure().addTo(map);
+ 
+ 
+  ctlSidebar = L.control.sidebar('side-bar').addTo(map);
+  ctlEasyButton = L.easyButton('fa-exchange', function () {
+        ctlSidebar.toggle();
+    }).addTo(map);
+ 
 });
 
