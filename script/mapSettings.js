@@ -89,7 +89,7 @@ let config = {
       attribution: '&copy; ',
       maxZoom: 16,
       subdomains:['mt0','mt1','mt2','mt3']
-  }).addTo(map);
+  });
   
   // {a|b|c}.tile.opentopomap.org/{z}/{x}/{y}.png
   // https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png
