@@ -171,7 +171,7 @@ let config = {
   ctlMeasure =L.control.polylineMeasure().addTo(map);
  
  
-  ctlSidebar = L.control.sidebar('side-bar').addTo(map);
+  // ctlSidebar = L.control.sidebar('side-bar').addTo(map);
  
   ctlEasyButton = L.easyButton('fa-map-maker', function () {
         map.locate();
