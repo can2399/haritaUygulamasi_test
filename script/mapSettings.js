@@ -1,6 +1,8 @@
 var map;
 var mrkCurrentLocation;
 var popMinarEPakistan;
+var ctlPan;
+var ctlZoomSlider;
 
 $(document).ready(function(){
  
@@ -64,9 +66,10 @@ let config = {
   
    var topluKatman = L.control.layers(baseLayers).addTo(map);
   
+ // deefault zoom control 
   // reactivate zoom at the desired location
   // [topleft, topright, bottomleft, bottomright]
-  L.control.zoom({ position: "topright" }).addTo(map);
+  // L.control.zoom({ position: "topright" }).addTo(map);
   
   // Sclae control
   L.control.scale('metric').addTo(map);
@@ -155,5 +158,8 @@ let config = {
         "<img src='img/minar-e-pakistan.jpg' width='300px' />");
     
     // popMinarEPakistan.openOnmap);
+ 
+  ctlPan = L.control.pan().addTo(map);
+  ctlZoomSlider = L.control.zoomslider({position: 'topright'}).addTo(map);
 });
 
