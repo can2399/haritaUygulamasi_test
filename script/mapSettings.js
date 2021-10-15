@@ -120,6 +120,10 @@ let config = {
         map.locate();
     })
   
+ // get specific location
+    $('#go_to_id').click(function () {
+        map.setView([39.941974, 32.854371], 18);
+    })
  
 
       
