@@ -173,7 +173,7 @@ let config = {
  
   // ctlSidebar = L.control.sidebar('side-bar').addTo(map);
  
-  ctlEasyButton = L.easyButton('fas fa-map-marker', function () {
+  ctlEasyButton = L.easyButton('fa-map-marker-alt', function () {
         map.locate();
     }).addTo(map);
  
