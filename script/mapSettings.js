@@ -172,8 +172,9 @@ let config = {
  
  
   ctlSidebar = L.control.sidebar('side-bar').addTo(map);
-  ctlEasyButton = L.easyButton('fa-exchange', function () {
-        ctlSidebar.toggle();
+ 
+  ctlEasyButton = L.easyButton('fa-map-maker', function () {
+        map.locate();
     }).addTo(map);
  
 });
