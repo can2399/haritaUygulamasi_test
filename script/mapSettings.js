@@ -171,10 +171,15 @@ let config = {
   ctlMeasure =L.control.polylineMeasure().addTo(map);
  
  
-  // ctlSidebar = L.control.sidebar('side-bar').addTo(map);
+
  
   ctlEasyButton = L.easyButton('fa-map-marker-alt', function () {
         map.locate();
+    }).addTo(map);
+ 
+ ctlSidebar = L.control.sidebar('side-bar').addTo(map);
+    ctlEasyButton = L.easyButton('fa-exchange', function () {
+        ctlSidebar.toggle();
     }).addTo(map);
  
 });
