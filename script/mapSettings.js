@@ -141,6 +141,9 @@ let config = {
         $('#mouse_location_id').html(lat_lng_to_string(e.latlng));
     })
 
-      
+     // custom functions
+    function lat_lng_to_string(ll) {
+        return "["+ll.lat.toFixed(5)+","+ll.lng.toFixed(5)+"]";
+    }
 });
 
