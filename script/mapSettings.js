@@ -1,4 +1,4 @@
-const map;
+var map;
 var mrkCurrentLocation;
 
 $(document).ready(function(){
