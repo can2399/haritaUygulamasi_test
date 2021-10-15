@@ -115,7 +115,7 @@ let config = {
   
  // get user location on button click
     $('#get_user_location_id').click(function () {
-        mapp.locate();
+        map.locate();
     })
   
   // single point
