@@ -173,7 +173,7 @@ let config = {
  
 
  
-  ctlEasyButton = L.easyButton('fa-map-marker-alt', function () {
+  ctlEasyButton = L.easyButton('fa-exchange', function () {
         map.locate();
     }).addTo(map);
  
