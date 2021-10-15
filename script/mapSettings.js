@@ -113,7 +113,10 @@ let config = {
   L.control.scale('metric').addTo(map);
   
   
-  
+ // get user location on button click
+    $('#get_user_location_id').click(function () {
+        myMap.locate();
+    })
   
   // single point
   //L.marker([39.941974, 32.854371]).addTo(map)
