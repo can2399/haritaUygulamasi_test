@@ -125,6 +125,21 @@ let config = {
         map.setView([39.941974, 32.854371], 18);
     })
  
+ // get zoom level
+    map.on('zoomend', function () {
+
+        $("#zoom_level_id").html(map.getZoom());
+    })
+
+    // get map center
+    map.on('moveend', function () {
+        $('#map_center_id').html(lat_lng_to_string(map.getCenter()));
+    })
+
+    // get mouse location
+    map.on('mousemove', function (e) {
+        $('#mouse_location_id').html(lat_lng_to_string(e.latlng));
+    })
 
       
 });
