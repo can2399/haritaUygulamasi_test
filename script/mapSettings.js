@@ -1,5 +1,6 @@
 var map;
 var mrkCurrentLocation;
+var popMinarEPakistan;
 
 $(document).ready(function(){
  
@@ -145,5 +146,13 @@ let config = {
     function lat_lng_to_string(ll) {
         return "["+ll.lat.toFixed(5)+","+ll.lng.toFixed(5)+"]";
     }
+ 
+   // popup for minar e pakistan
+    popMinarEPakistan = L.popup();
+    popMinarEPakistan.setLatLng([31.59248,74.30966]);
+    popMinarEPakistan.setContent("<h2> Minar e Pakistan </h2>" +
+        "<img src='img/minar-e-pakistan.jpg' width='300px' />");
+    
+    // popMinarEPakistan.openOnmap);
 });
 
