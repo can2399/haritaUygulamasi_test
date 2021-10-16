@@ -83,17 +83,15 @@ let config = {
  
  // var topluKatman = L.control.layers(baseLayers).addTo(map);
  
+ ObjOverlays ={
+        "Trees": lyrTrees,
+    }
+ 
   lyrTrees = L.geoJSON.ajax('data/trees.geojson',{pointToLayer:funReturnTrees}).addTo(map);
     lyrTrees.on('data:load', function () {
         map.fitBounds(lyrTrees.getBounds())
     })
  
- ObjOverlays ={
-        "Draw Items": fgDrawItems,
-        "Trees": lyrTrees,
-        "BaseMAp":lyrFields
-    }
-
     L.control.layers(baseLayers, ObjOverlays).addTo(map);
   
  // deefault zoom control 
