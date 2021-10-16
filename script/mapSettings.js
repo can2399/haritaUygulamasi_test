@@ -207,7 +207,20 @@ let config = {
         ctlSidebar.toggle();
     }).addTo(map);
  
+ // functions on Trees Layer
+    function funReturnTrees(geoJsonPoint, latlng) {
+        var att = geoJsonPoint.properties;
+        if (att.type == 'Evergreen Trees'){
+            var treeColor = 'green';
+        } else if (att.type == 'Angiosperms'){
+            var treeColor = 'red';
+        }else {
+            var treeColor = 'pink';
+        }
+        return L.circleMarker(latlng, {radius:10, color:treeColor})
+            .bindTooltip("<h4>type:"+att.type+"</h4>")
 
+    }
 
 
     
