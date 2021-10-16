@@ -7,6 +7,7 @@ var ctlMousePosition;
 var ctlMeasure;
 var ctlEasyButton;
 var ctlSidebar;
+var ObjOverlays;
 var lyrTrees;
 
 $(document).ready(function(){
@@ -79,8 +80,21 @@ let config = {
     "Google Uydu"    : googleSat,
     "Yandex"         : yandexMap
   };
-  
-   var topluKatman = L.control.layers(baseLayers).addTo(map);
+ 
+ // var topluKatman = L.control.layers(baseLayers).addTo(map);
+ 
+  lyrTrees = L.geoJSON.ajax('data/trees.geojson',{pointToLayer:funReturnTrees}).addTo(map);
+    lyrTrees.on('data:load', function () {
+        map.fitBounds(lyrTrees.getBounds())
+    })
+ 
+ ObjOverlays ={
+        "Draw Items": fgDrawItems,
+        "Trees": lyrTrees,
+        "BaseMAp":lyrFields
+    }
+
+    L.control.layers(baseLayers, ObjOverlays).addTo(map);
   
  // deefault zoom control 
   // reactivate zoom at the desired location
@@ -194,19 +208,10 @@ let config = {
         ctlSidebar.toggle();
     }).addTo(map);
  
- lyrTrees = L.geoJSON.ajax('data/trees.geojson',{pointToLayer:funReturnTrees}).addTo(myMap);
-    lyrTrees.on('data:load', function () {
-        myMap.fitBounds(lyrTrees.getBounds())
-    })
 
 
-    ObjOverlays ={
-        "Draw Items": fgDrawItems,
-        "Trees": lyrTrees,
-        "BaseMAp":lyrFields
-    }
 
-    L.control.layers(objBaseMap, ObjOverlays).addTo(map);
+    
  
 });
 
