@@ -6,7 +6,8 @@ var ctlZoomSlider;
 var ctlMousePosition;
 var ctlMeasure;
 var ctlEasyButton;
-var ctlSidebar
+var ctlSidebar;
+var lyrTrees;
 
 $(document).ready(function(){
  
@@ -192,6 +193,20 @@ let config = {
     ctlEasyButton = L.easyButton('fa-exchange', function () {
         ctlSidebar.toggle();
     }).addTo(map);
+ 
+ lyrTrees = L.geoJSON.ajax('data/trees.geojson',{pointToLayer:funReturnTrees}).addTo(myMap);
+    lyrTrees.on('data:load', function () {
+        myMap.fitBounds(lyrTrees.getBounds())
+    })
+
+
+    ObjOverlays ={
+        "Draw Items": fgDrawItems,
+        "Trees": lyrTrees,
+        "BaseMAp":lyrFields
+    }
+
+    L.control.layers(objBaseMap, ObjOverlays).addTo(map);
  
 });
 
