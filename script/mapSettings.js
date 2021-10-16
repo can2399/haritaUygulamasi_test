@@ -83,14 +83,15 @@ let config = {
  
  // var topluKatman = L.control.layers(baseLayers).addTo(map);
  
+ lyrTrees = L.geoJSON.ajax('data/trees.geojson',{pointToLayer:funReturnTrees}).addTo(map);
+    lyrTrees.on('data:load', function () {
+        map.fitBounds(lyrTrees.getBounds())
+    })
  ObjOverlays ={
         "Trees": lyrTrees,
     }
  
-  lyrTrees = L.geoJSON.ajax('data/trees.geojson',{pointToLayer:funReturnTrees}).addTo(map);
-    lyrTrees.on('data:load', function () {
-        map.fitBounds(lyrTrees.getBounds())
-    })
+  
  
     L.control.layers(baseLayers, ObjOverlays).addTo(map);
   
